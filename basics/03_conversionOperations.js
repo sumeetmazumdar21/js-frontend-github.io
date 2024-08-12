@@ -49,4 +49,31 @@ let booleanResult = Boolean(isLoggedIn);
 // String Conversion
 let someNum = 21;
 let stringNum = String(someNum);
-console.table([typeof(stringNum), stringNum]);
+// console.table([typeof(stringNum), stringNum]);
+
+
+/*************OPERATIONS ********************/
+
+let str1 = "hello";
+let str2 = " world!";
+let str3 = str1 + str2;
+// console.log(str3);
+
+// console.log( 1 + 2);
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);
+// console.log(1 + 2 + "2");
+
+let gameCounter = 100;
+++gameCounter;
+console.log(gameCounter);
+
+/*
+Link to conversion operations:
+    https://tc39.es/ecma262/#sec-abstract-operations
+*/
+
+
+
+
