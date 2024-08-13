@@ -82,8 +82,8 @@ Statically-typed Language
     let userAddress = "Patna";
     let newAddress = userAddress;
     newAddress = "Bangalore";
-    // console.log(userAddress);
-    // console.log(newAddress);
+    // console.log(userAddress);  // Patna
+    // console.log(newAddress); // Bangalore
 
 /* Heap memory => Non-primitive Datatype */
 
@@ -93,11 +93,11 @@ Statically-typed Language
     }
     let userTwo = userOne;
 
-    console.log("userOne email before updating userTwo", userOne.email);
-    console.log("userTwo email before updating userTwo", userTwo.email);
+    console.log("userOne email before updating userTwo", userOne.email); //abc@gmail.com
+    console.log("userTwo email before updating userTwo", userTwo.email); // abc@gmail.com
 
     userTwo.email = "JohnDoe@gmail.com";
 
-    console.log("userTwo email after updating userTwo",userTwo.email);
-    console.log("userOne email after updating userTwo",userOne.email);
+    console.log("userTwo email after updating userTwo",userTwo.email); //JohnDoe@gmail.com
+    console.log("userOne email after updating userTwo",userOne.email); //JohnDoe@gmail.com
     
