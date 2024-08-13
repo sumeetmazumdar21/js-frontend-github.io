@@ -33,9 +33,9 @@ let password; // undefined
     */
 const id = Symbol('123');
 const newId = Symbol('123');
-console.log(id === newId);
-console.log("id: ",id);
-console.log("newId: ", newId);
+// console.log(id === newId);
+// console.log("id: ",id);
+// console.log("newId: ", newId);
 
 // Arrays
     let heroes = ["Spiderman", "Ironman", "Superman"];
@@ -51,7 +51,7 @@ console.log("newId: ", newId);
 
 // Functions:
     const myFunc = function(){
-        console.log("A function declaration example");        
+        // console.log("A function declaration example");        
     }
 
 
@@ -75,3 +75,29 @@ Statically-typed Language
     String name = "John"; // name is a variable of type String
     JavaScript's dynamic typing allows for more flexibility but can lead to potential runtime errors if not handled carefully. Static typing, on the other hand, provides better type safety at the cost of some initial verbosity and strictness.
 */
+
+/**************Memory Allocation*************/
+
+/* Stack Memory => Primitive Datatypes */
+    let userAddress = "Patna";
+    let newAddress = userAddress;
+    newAddress = "Bangalore";
+    // console.log(userAddress);
+    // console.log(newAddress);
+
+/* Heap memory => Non-primitive Datatype */
+
+    let userOne = {
+        email: "abc@gmail.com",
+        upi: "abc@ybl"
+    }
+    let userTwo = userOne;
+
+    console.log("userOne email before updating userTwo", userOne.email);
+    console.log("userTwo email before updating userTwo", userTwo.email);
+
+    userTwo.email = "JohnDoe@gmail.com";
+
+    console.log("userTwo email after updating userTwo",userTwo.email);
+    console.log("userOne email after updating userTwo",userOne.email);
+    
