@@ -20,15 +20,46 @@
     let newArr = arr1.flat(5); // upto depth of 5
     console.log(newArr); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3]
 
-// Creating arrays from variables
+// Static Methods
 
-    console.log(Array.isArray("Sumeet")); //false
-    console.log(Array.from("Sumeet")); // [ 'S', 'u', 'm', 'e', 'e', 't' ]
-    console.log(Array.from({name: "Sameer"})); // [] => We need to mention whether array is to be created of the "keys" or "values"
+    // Array.isArray() => determines whether the passed value is an Array
+
+        console.log(Array.isArray("Sumeet")); //false
+
+        console.log(Array.isArray([1, 3, 5]));
+        // Expected output: true
+
+        console.log(Array.isArray('[]'));
+        // Expected output: false
+
+        console.log(Array.isArray(new Array(5)));
+        // Expected output: true
+
+        console.log(Array.isArray(new Int16Array([15, 33])));
+        // Expected output: false
+
+    // Array.from() => creates a new, shallow-copied Array instance from an iterable or array-like object.
+
+        console.log(Array.from("Sumeet")); // [ 'S', 'u', 'm', 'e', 'e', 't' ]
+
+        console.log(Array.from({name: "Sameer"})); // [] => We need to mention whether array is to be created of the "keys" or "values"
+
+        console.log(Array.from('foo'));
+        // Expected output: Array ["f", "o", "o"]
+
+        console.log(Array.from([1, 2, 3], (x) => x + x));
+        // Expected output: Array [2, 4, 6]
     
-    let marks1 = 100;
-    let marks2 = 78;
-    let marks3 = 56;
-    console.log(Array.of(marks1, marks2, marks3)); //[ 100, 78, 56 ]
+    // Array.of() => creates a new Array instance from a variable number of arguments, regardless of number or type of the arguments.
+        let marks1 = 100;
+        let marks2 = 78;
+        let marks3 = 56;
+        console.log(Array.of(marks1, marks2, marks3)); //[ 100, 78, 56 ]
+
+        console.log(Array.of('foo', 2, 'bar', true));
+        // Expected output: Array ["foo", 2, "bar", true]
+
+        console.log(Array.of());
+        // Expected output: Array []
     
     
