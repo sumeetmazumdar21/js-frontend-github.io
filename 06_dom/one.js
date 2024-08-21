@@ -15,3 +15,35 @@
 
             title.innerHTML
                 // 'Learning DOM Manipulation\n            <span style="display: none;">testing innerHTML, textContent and innerText</span>\n 
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// querySelector()
+
+document.querySelector('#header')
+    //  <h1 id="header" class="heading">Learning DOM Manipulation
+    // <span style="display: none;">testing innerHTML, textContent and innerText</span>
+    // </h1>
+
+document.querySelector('input[type="password"]')
+        //<input type="password" name="password" id="password">
+
+    const myUlist = document.querySelector('ul')
+    // undefined
+    
+    myUlist
+    // <ul>​…​</ul>​
+    
+    const greenList = myUlist.querySelector('li')
+    // undefined
+    greenList
+    // <li>​…​</li>​
+    
+    greenList.style.backgroundColor= "green"
+    // 'green'
+    
+    greenList.style.padding = "20px"
+    // '20px'
+    
+    greenList.style.fontSize= "30px"
+    // '30px'
