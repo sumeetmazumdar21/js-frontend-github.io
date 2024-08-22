@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM - Create Element</title>
+</head>
+<body style="background-color: #212121; color:#fff; font-size: x-large; font-weight: 500;">
+    
+</body>
+
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main";
+    div.id = "main-div";
+    div.setAttribute("title", "create-div");
+    div.style.backgroundColor= "green";
+    // div.innerText= "Create a new element";
+    const addText = document.createTextNode("Create a new element");
+    div.appendChild(addText);
+
+    // appending child to document
+    document.body.appendChild(div)
+</script>
+</html>
