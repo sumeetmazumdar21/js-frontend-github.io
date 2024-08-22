@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Element</title>
+</head>
+<body style="background-color: #212121; color:#fff; font-size: x-large; font-weight: 500;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    // Create Element
+    
+    function addListItem(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addListItem("TypeScript");
+    addListItem("Java");
+
+// Recommended Approach for creating elements
+    function optimizedItemAddition(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    optimizedItemAddition("Python");
+
+    // Edit element
+
+    // 1)
+    const thirdLang = document.querySelector('li:nth-child(3)');
+    thirdLang.innerHTML = "Mojo" // Java => Mojo
+    
+    // 2)
+    const newLi = document.createElement('li');
+    newLi.textContent = "Golang";
+    thirdLang.replaceWith(newLi); // Mojo => Golang
+
+    // 3)
+    const secondLang = document.querySelector('li:nth-child(2)');
+    secondLang.outerHTML = '<li>Perl</li>' // Typescript => Perl
+
+    // Remove element
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove(); // removes "pyhton" from the list
+
+</script>
+</html>
