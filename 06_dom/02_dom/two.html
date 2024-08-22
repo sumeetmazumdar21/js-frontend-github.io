@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color:#fff; font-size: x-large; font-weight: 500;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="class">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent);
+    // <div class="parent">
+    //     <div class="day">Monday</div>
+    //     <div class="day">Tuesday</div>
+    //     <div class="class" style="color: orange;">Wednesday</div>
+    //     <div class="day">Thursday</div>
+    //     <div class="day">Friday</div>
+    //     <div class="day">Saturday</div>
+    //     <div class="day">Sunday</div>
+    // </div>
+    // console.log(parent.lastElementChild);
+    // <div class="day">Sunday</div>
+    const dayThree = parent.children[2];
+    // console.log(dayThree);
+    // // <div class="class" style="color: orange;">Wednesday</div>
+    dayThree.style.color = "orange";
+    // console.log(dayThree.parentElement);
+    // console.log(dayThree.nextElementSibling);
+    // <div class="day">Thursday</div>
+
+    console.log("NODES: ", parent.childNodes);
+    // NODES:  
+        // NodeList(9) [text, div.day, text, div.day, text, div.class, text, div.day, text]
+        // 0
+        // : 
+        // text
+        // 1
+        // : 
+        // div.day
+        // 2
+        // : 
+        // text
+        // 3
+        // : 
+        // div.day
+        // 4
+        // : 
+        // text
+        // 5
+        // : 
+        // div.class
+        // 6
+        // : 
+        // text
+        // 7
+        // : 
+        // div.day
+        // 8
+        // : 
+        // text
+        // length
+        // : 
+        // 9
+        // [[Prototype]]
+        // : 
+        // NodeList
+
+    
+    
+    
+</script>
+</html>
