@@ -116,6 +116,7 @@ if(playGame){
 function validateGuess(guess){
   if(isNaN(guess)){
     alert("Please enter a valid number");
+    userInput.value = '';
   }else if(guess < 1){
     alert("Please enter a number greater than 1");
   }else if(guess > 100){
