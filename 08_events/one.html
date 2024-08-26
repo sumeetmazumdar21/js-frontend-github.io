@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #515151; color: whitesmoke;">
+    <h2>Cosmopolitan Cities</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://i.pinimg.com/236x/c6/cb/46/c6cb46e898757fd90857826455e3785f.jpg" alt="photoshop"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/12/83/c2/1283c2adb0a783b1ff61fd9377495674.jpg" alt="" id="new-york"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/38/01/09/380109fac828766c172b72e1b7a45f50.jpg" alt="" id="london"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/3a/16/41/3a16411333a5304579e38c77ba83babb.jpg" alt="" id="mumbai"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/99/a5/f2/99a5f20fdee57e12010f055840eda500.jpg" alt="" id="tokyo"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/c8/43/b1/c843b1a2cdc681da7216073828d5aaa3.jpg" alt="" id="paris"></li>
+            <li><img width="200px" src="https://i.pinimg.com/236x/f9/cf/54/f9cf5416effebf68df62c86dc41669e8.jpg" alt="" id="amsterdam"></li>
+            <li><a style="color: whitesmoke;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // document.getElementById('mumbai').onclick = () => {
+    //     alert("Mumbai, India");
+    // }
+
+    // Important:
+
+        // type, timestamp, preventDefault
+        // srcElement, target, toElement, currentTarget
+        // screenX, screenY, clientX, clientY
+        // altKey, ctrlKey, shiftKey, keyCode
+
+    // document.getElementById('mumbai').addEventListener('click', (e) => {
+    //     console.log(e);
+    //     // PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
+    // }, false)
+
+    // document.getElementById('images').addEventListener('click', () => {
+    //     console.log("Clicked inside image list");        
+    // }, false);
+    
+    // // Event Propagation and stopPropagation
+    // document.getElementById('london').addEventListener('click', (e) => {
+    //     // Event Propagation
+    //     // console.log("Clicked London"); 
+    //     // Clicked London
+    //     // Clicked inside image list
+        
+    //     e.stopPropagation();
+    //     //Clicked London
+    // }, false);
+
+    // // preventDefault()
+    // document.getElementById('google').addEventListener('click', (e) => {
+    //     // console.log("Link clicked");  
+    //     // Link Clicked
+    //     // Clicked inside image list
+
+    //     e.preventDefault(); // doesn't open the link on click, prevents default behavior
+
+    //     // Stop propagation
+    //     e.stopPropagation();
+    //     console.log("Link clicked");  // Link clicked
+    // }, false);
+    
+</script>
+</html>
