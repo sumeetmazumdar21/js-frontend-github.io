@@ -66,5 +66,31 @@
     //     console.log("Link clicked");  // Link clicked
     // }, false);
     
+//  operations using addEventListener()
+
+// Delete an image on clicking using addEventListener()
+// Event spillOver
+document.querySelector('#images').addEventListener('click', function(e){
+    // clicking London's image
+    // console.log(e.target);
+        // <img width="200px" src="https://i.pinimg.com/236x/38/01/09/380109fac828766c172b72e1b7a45f50.jpg" alt="" id="london">
+      
+    // console.log(e.target.parentNode);
+        // <li><img width="200px" src="https://i.pinimg.com/236x/38/01/09/380109fac828766c172b72e1b7a45f50.jpg" alt="" id="london"></li>
+    
+    // Selecting parentNode is necessary, as it will remove the entire li element containing the image. Else, the image will be deleted, leaving behind the bullet point of the image
+    console.log(e.target.tagName);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);        
+        const removeItem = e.target.parentNode ;
+        removeItem.remove();
+    }
+    
+
+    // another method for removing an image item
+    // removeItem.parentNode.removeChild(removeItem);
+    
+}, false)
+
 </script>
 </html>
