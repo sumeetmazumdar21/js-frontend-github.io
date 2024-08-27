@@ -200,10 +200,13 @@ const changeBackgroundColor = (color) => {
 }
 
 document.querySelector('#start').addEventListener('click', () => {
-    timer = setInterval(changeBackgroundColor, 500, color);
+    if(!timer){
+      timer = setInterval(changeBackgroundColor, 500, color);
+    }
 });
 
 document.querySelector('#stop').addEventListener('click', function(){
-    clearInterval(timer);
+    clearInterval(timer); 
+    timer = null;
 })
 ```
