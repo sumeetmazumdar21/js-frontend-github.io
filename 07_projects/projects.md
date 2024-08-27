@@ -178,3 +178,32 @@ function newGame(){
 
 
 ```
+
+## Project 6 - Change background color infinitely
+
+```javascript
+let timer;
+
+const randomColor = () => {
+    const hexCode = "0123456789ABCDEF";
+    let color = "#";
+    for(let i = 0; i < 6; i++){
+        color += hexCode[Math.floor(Math.random() * 16)];
+    }
+    return color;        
+}
+
+let color = randomColor();
+
+const changeBackgroundColor = (color) => {
+    document.querySelector('body').style.backgroundColor = randomColor();
+}
+
+document.querySelector('#start').addEventListener('click', () => {
+    timer = setInterval(changeBackgroundColor, 500, color);
+});
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(timer);
+})
+```
