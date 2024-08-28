@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML HTTP REQUEST</title>
+    <style>
+        table, th, td {
+        border: 3px solid green;
+        padding: 5px;
+        color: white;
+        }
+    </style>
+</head>
+<body style="background-color: #313131;">
+    <!-- Value	State	Description
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete. -->
+
+<table>
+    <tr>
+      <th>Value</th>
+      <th>State</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>UNSENT</td>
+      <td>Client has been created. open() not called yet.</td>
+    </tr>
+      <td>1</td>
+      <td>OPENED</td>
+      <td>open() has been called.</td>
+    </tr>
+      <td>2</td>
+      <td>HEADERS_RECEIVED</td>
+      <td>send() has been called, and headers and status are available.</td>
+    </tr>
+      <td>3</td>
+      <td>LOADING</td>
+      <td>Downloading; responseText holds partial data.</td>
+    </tr>
+      <td>4</td>
+      <td>DONE</td>
+      <td>The operation is complete.</td>
+    </tr>
+    
+  </table>
+</body>
+
+<script>
+    
+    const reqURL = 'https://randomuser.me/api/';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', reqURL)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            console.log(data.results[0].location);
+            
+        }
+    }
+    xhr.send();
+    
+</script>
+</html>
